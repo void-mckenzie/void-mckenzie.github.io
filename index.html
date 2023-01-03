@@ -2,15 +2,28 @@
 <html style="background-color: #07374a; /* Ocean blue color */">
   <head>
     <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Scientist Portfolio</title>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <style>
       /* Add some style to the page */
+html {
+  scroll-behavior: smooth;
+}
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+//background-color: #07374a; /* Ocean blue color */;
+  //background: linear-gradient(141deg, #07374a 0%, #1fc8db 51%, #2cb5e8 75%);
+background: url("images/bg.jpg") no-repeat;
+  /* Keep the inherited background full size. */
+  background-attachment: fixed; 
+  background-size: cover;
       }
       header {
 	background-color:black;
@@ -54,31 +67,39 @@
         text-align: center;
       }
       #about {
-        background-color: /*#00b4d8*/; /* Ocean blue color */
+        //background-color: /*#00b4d8*/; /* Ocean blue color */
+ background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+border-radius: 5px;
       }
       #work-experience {
-        background-color: #00c3a7; /* Ocean green color */
+        //background-color: #00c3a7; /* Ocean green color */
+ background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+border-radius: 5px;
       }
       #research-projects {
-        background-color: #00d8c3; /* Ocean blue-green color */
+        //background-color: #00d8c3; /* Ocean blue-green color */
+ background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+border-radius: 5px;
       }
       #academic-projects {
-        background-color: #c3e8ff; /* Light ocean blue color */
+        //background-color: #c3e8ff; /* Light ocean blue color */
+ background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+border-radius: 5px;
       }
       h2 {
         margin: 0 0 10px 0;
       }
-      .project {
-        display: inline-block;
-        width: 45%;
-      }
       .project-row {
-        display: flex;
         justify-content: space-between;
+	padding: 20px;
       }
-      .project img {
-        width: 100%;
-      }
+	.project p,h1,h2,h3,h4,h5{
+color:black;
+}
       .project a {
         background-color: #00c3a7; /* Ocean green color */
         color: white;
@@ -95,6 +116,7 @@ border-radius: 10px;
         padding: 20px;
         text-align: center;
       }
+
     </style>
   </head>
   <body>
@@ -131,17 +153,17 @@ border-radius: 10px;
       <section id="research-projects">
         <h2>Research Projects</h2>
         <div class="section-content">
-          <div class="project-row">
-            <div class="project">
-              <img style="height:270px;width:auto;" src="images/DR.png" alt="Project 1">
+          <div class="row project-row">
+            <div class="col-md-6 col-xs-12 project">
+              <img style="height:300px;width:auto;" src="images/DR.png" alt="Project 1">
               <h3>Diabetic Retinopathy Diagnosis with InceptionResNetV2, Xception and EfficientNetB3</h3>
 		<h4> December 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
               <p>Investigated performance of transfer learning enhanced models on India-specific IDRiD dataset and experimented with data augmentation; Improved accuracy. Presented at ICRTAC 2020. </p>
               <a href="https://link.springer.com/chapter/10.1007/978-981-16-6448-9_41" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
-            <div class="project">
-              <img style="height:270px;width:auto;" src="images/autoenc.PNG" alt="Project 2">
+            <div class="col-md-6 col-xs-12 project">
+              <img style="height:300px;width:auto;" src="images/autoenc.PNG" alt="Project 2">
               <h3>Autoencoder based Network Anomaly Detection</h3>
 		<h4>October 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
@@ -149,17 +171,17 @@ border-radius: 10px;
               <a href="https://ieeexplore.ieee.org/abstract/document/9557464" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
-          <div class="project-row">
-            <div class="project">
-              <img style="height:270px;width:auto;" src="images/breakhis.PNG" alt="Project 3">
+          <div class="row project-row">
+            <div class="col-md-6 col-xs-12 project">
+              <img style="height:300px;width:auto;" src="images/breakhis.PNG" alt="Project 3">
               <h3>Breast Cancer Histopathological Image Classification</h3>
 		<h4>August 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
               <p>Conducted analysis on models based on EfficientNet Architecture to classify breast cancer histopathological images; Performance exceeded prior SOTA ResNet & DenseNet models. Presented at IEEE-TEMSMET 2020. </p>
               <a href="https://ieeexplore.ieee.org/abstract/document/9557441" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
-            <div class="project">
-              <img style="height:270px;width:auto;" src="images/car.PNG" alt="Project 4">
+            <div class="col-md-6 col-xs-12 project">
+              <img style="height:300px;width:auto;" src="images/car.PNG" alt="Project 4">
               <h3>Used Car Price Prediction using Supervised Learning Methodologies</h3><h4>December 2019</h4>
 		<h4>Tech Stack: SAS and Python</h4>
               <p>Tested the effectiveness of different machine learning models in predicting the price of used cars. Presented at the 2nd World Summit on Advances in Science, Eng. and Technology, Indiana, October 2019.</p>
@@ -171,43 +193,43 @@ border-radius: 10px;
       <section id="academic-projects">
         <h2>Academic Projects</h2>
         <div class="section-content">
-          <div class="project-row">
-            <div class="project">
+          <div class="row project-row">
+            <div class="col-md-6 col-xs-12 project">
               <img style="height:270px;width:auto;" src="project5.jpg" alt="Project 5">
               <h3>Project 5</h3><h4>August 2020</h4><h4>Tech Stack: </h4>
                             <p>Insert details about your fifth academic project here.</p>
               <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
-            <div class="project">
+            <div class="col-md-6 col-xs-12 project">
               <img style="height:270px;width:auto;" src="project6.jpg" alt="Project 6">
               <h3>Project 6</h3><h4>August 2020</h4><h4>Tech Stack: </h4>
               <p>Insert details about your sixth academic project here.</p>
               <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
-          <div class="project-row">
-            <div class="project">
+          <div class="row project-row">
+            <div class="col-md-6 col-xs-12 project">
               <img style="height:270px;width:auto;" src="project7.jpg" alt="Project 7">
               <h3>Project 7</h3><h4>August 2020</h4><h4>Tech Stack: </h4>
               <p>Insert details about your seventh academic project here.</p>
               <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
-            <div class="project">
+            <div class="col-md-6 col-xs-12 project">
               <img style="height:270px;width:auto;" src="project8.jpg" alt="Project 8">
               <h3>Project 8</h3><h4>August 2020</h4><h4>Tech Stack: </h4>
               <p>Insert details about your eighth academic project here.</p>
               <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
-          <div class="project-row">
-            <div class="project">
+          <div class="row project-row">
+            <div class="col-md-6 col-xs-12 project">
               <img style="height:270px;width:auto;" src="project9.jpg" alt="Project 9">
               <h3>Project 9</h3><h4>August 2020</h4><h4>Tech Stack: </h4>
               <p>Insert details about your ninth academic project here.</p>
               <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
             <div class="project">
-              <img style="height:270px;width:auto;" src="project10.jpg" alt="Project 10">
+              <img style="col-md-6 col-xs-12 height:270px;width:auto;" src="project10.jpg" alt="Project 10">
               <h3>Project 10</h3><h4>August 2020</h4><h4>Tech Stack: </h4>
               <p>Insert details about your tenth academic project here.</p>
               <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
@@ -225,7 +247,7 @@ border-radius: 10px;
               event.preventDefault();
               $("html, body").animate({
                   scrollTop: $($(this).attr("href")).offset().top -100
-                }, 700);
+                }, 200);
             });
         });
     </script>
