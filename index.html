@@ -104,6 +104,9 @@ justify-content:space-between;
 	.project p,h1,h2,h3,h4,h5{
 color:black;
 }
+.project h2,h3{
+font-weight: bold;
+}
       .project a {
         background-color: #00c3a7; /* Ocean green color */
         color: white;
@@ -121,11 +124,126 @@ border-radius: 10px;
         text-align: center;
       }
 
+
+:root {
+  --primary: #37a9e1;
+  --primary-gradient: linear-gradient(45deg, #153c7e 0%, #37a9e1 100%);
+}
+.section-header {
+  text-align: center;
+}
+.section-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.section-header hr {
+  border: 1px solid #fff;
+  width: 56px;
+}
+.bg-gradient_solid {
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 48px 0;
+}
+.steps {
+  position: relative;
+  margin-top: 32px;
+}
+.steps::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  opacity: 0.4;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.steps .content p {
+  color: #676767;
+  font-size: 16px;
+}
+
+.steps .content h2 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #676767;
+}
+
+.steps-container {
+  position: relative;
+  background-color: inherit;
+  width: calc(50% + 32px);
+}
+
+.steps-container .content {
+  padding: 32px;
+  background-color: white;
+  position: relative;
+  border-radius: 0px 0px 80px 0px;
+  box-shadow: 0px 16px 27px rgb(0 11 30 / 10%);
+}
+
+.steps .steps-container:nth-child(even) {
+  left: calc(50% - 32px);
+  flex-direction: row-reverse;
+}
+
+.steps-container {
+  display: flex;
+}
+
+.steps .steps-container .date {
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  width: 62px;
+  height: 62px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 777;
+}
+
+.step-line {
+  width: 40px;
+  background-color: #fff;
+  height: 1px;
+  margin-top: 31px;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .steps::after {
+    left: 32px;
+  }
+  .steps-container {
+    left: 0;
+    flex-direction: row-reverse;
+    width: auto;
+    margin-bottom: 16px;
+  }
+  .steps .steps-container:nth-child(even) {
+    left: 0;
+  }
+}
+
+
+
+
+
     </style>
   </head>
   <body>
     <header>
-      <h1>Data Scientist Portfolio</h1>
+      <h1 style="color:white;">Portfolio</h1>
     </header>
     <nav>
     <ul>
@@ -143,6 +261,68 @@ border-radius: 10px;
           <p style="color: white;">Insert information about yourself as a data scientist here.</p>
         </div>
       </section>
+
+
+
+
+      <div class="container">
+    <div class="section-header">
+      <h2>Our story</h2>
+      <hr>
+    </div>
+    <div class="steps">
+      <div class="steps-container">
+        <div class="content">
+          <h2>Vellore Institute of Technology (2017-2021)</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+        <i class="step-line"></i>
+        <div class="date">2017</div>
+      </div>
+      <div class="steps-container">
+        <div class="content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+        <i class="step-line"></i>
+        <div class="date">2001</div>
+      </div>
+      <div class="steps-container">
+        <div class="content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+        <i class="step-line"></i>
+        <div class="date">2002</div>
+      </div>
+      <div class="steps-container">
+        <div class="content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+        <i class="step-line"></i>
+        <div class="date">2003</div>
+      </div>
+      <div class="steps-container">
+        <div class="content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+        <i class="step-line"></i>
+        <div class="date">2004</div>
+      </div>
+      <div class="steps-container">
+        <div class="content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+        <i class="step-line"></i>
+        <div class="date">2005</div>
+      </div>
+    </div>
+  </div>
+
+
       <section id="work-experience">
         <h2>Work Experience</h2>
         <div class="section-content">
@@ -160,7 +340,7 @@ border-radius: 10px;
           <div class="row project-row">
             <div class="col-md-6 col-xs-12 project">
               <img style="height:50%;width:50%;" src="images/DR.png" alt="Project 1">
-              <h3>Diabetic Retinopathy Diagnosis with InceptionResNetV2, Xception and EfficientNetB3</h3>
+              <h3 style="font-size:23px">Diabetic Retinopathy Diagnosis with InceptionResNetV2, Xception and EfficientNetB3</h3>
 		<h4> December 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
               <p>Investigated performance of transfer learning enhanced models on India-specific IDRiD dataset and experimented with data augmentation; Improved accuracy. Presented at ICRTAC 2020. </p>
@@ -177,7 +357,7 @@ border-radius: 10px;
           </div>
           <div class="row project-row">
             <div class="col-md-6 col-xs-12 project">
-              <img style="height:60%;width:60%;" src="images/breakhis.PNG" alt="Project 3">
+              <img style="height:50%;width:50%;" src="images/breakhis.PNG" alt="Project 3">
               <h3>Breast Cancer Histopathological Image Classification</h3>
 		<h4>August 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
@@ -185,7 +365,7 @@ border-radius: 10px;
               <a href="https://ieeexplore.ieee.org/abstract/document/9557441" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
             <div class="col-md-6 col-xs-12 project">
-              <img style="height:40%;width:40%;" src="images/car.PNG" alt="Project 4">
+              <img style="height:50%;width:50%;" src="images/car.PNG" alt="Project 4">
               <h3>Used Car Price Prediction using Supervised Learning Methodologies</h3><h4>December 2019</h4>
 		<h4>Tech Stack: SAS and Python</h4>
               <p>Tested the effectiveness of different machine learning models in predicting the price of used cars. Presented at the 2nd World Summit on Advances in Science, Eng. and Technology, Indiana, October 2019.</p>
