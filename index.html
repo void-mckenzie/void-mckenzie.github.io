@@ -47,11 +47,12 @@
       }
       section {
         margin: 20px 0;
+        margin-top: 60px; /* Add a top margin equal to the height of the nav bar */
         text-align: center;
       }
       h2 {
         margin: 0 0 10px 0;
-      }
+	}
       .project {
         display: inline-block;
         width: 45%;
@@ -65,11 +66,6 @@
         color: white;
         padding: 20px;
         text-align: center;
-      }
-
-      /* Add a margin to the main content to account for the fixed nav bar */
-      main {
-        margin-top: 60px;
       }
     </style>
   </head>
@@ -95,7 +91,10 @@
       </section>
       <section id="work-experience">
         <h2>Work Experience</h2>
-
+        <h3>Current Position</h3>
+        <div class="section-content">
+          <p>Insert details about your current position as a data scientist here, including the company you work for and the projects you are working on.</p>
+        </div>
         <h3>Past Positions</h3>
         <div class="section-content">
           <p>Insert details about any past positions as a data scientist here, including the companies you worked for and the projects you worked on.</p>
@@ -137,4 +136,3 @@
     </footer>
   </body>
 </html>
-
