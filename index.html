@@ -66,29 +66,40 @@ background: url("images/bg.jpg") no-repeat;
         margin-top: 60px; /* Add a top margin equal to the height of the nav bar */
         text-align: center;
       }
+      #education {
+        //background-color: /*#00b4d8*/; /* Ocean blue color */
+ background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+border-radius: 5px;
+padding: 20px;
+      }
       #about {
         //background-color: /*#00b4d8*/; /* Ocean blue color */
  background-color: rgba(255, 255, 255, .15);  
  backdrop-filter: blur(5px);
 border-radius: 5px;
+padding: 20px;
       }
       #work-experience {
         //background-color: #00c3a7; /* Ocean green color */
  background-color: rgba(255, 255, 255, .15);  
  backdrop-filter: blur(5px);
 border-radius: 5px;
+padding: 20px;
       }
       #research-projects {
         //background-color: #00d8c3; /* Ocean blue-green color */
  background-color: rgba(255, 255, 255, .15);  
  backdrop-filter: blur(5px);
 border-radius: 5px;
+padding: 20px;
       }
       #academic-projects {
         //background-color: #c3e8ff; /* Light ocean blue color */
  background-color: rgba(255, 255, 255, .15);  
  backdrop-filter: blur(5px);
 border-radius: 5px;
+padding: 20px;
       }
       h2 {
         margin: 0 0 10px 0;
@@ -263,17 +274,17 @@ font-weight: 530;
         <div class="section-content">
           <p style="color: white;">Insert information about yourself as a data scientist here.</p>
 	        <div class="footer-links">
-	<p>Github:<a style="color:white;" href="www.github.com/void-mckenzie" target="_blank" rel="noopener noreferrer">void-mckenzie</a>; Email: mganesh@usc.edu , mukkeshganesh@gmail.com ; LinkedIn:<a style="color:white;" href="https://www.linkedin.com/in/mukkesh-g/" target="_blank" rel="noopener noreferrer">Mukkesh Ganesh</a></p>
+	<p style="color: white;">Github:<a style="color:black;" href="www.github.com/void-mckenzie" target="_blank" rel="noopener noreferrer">void-mckenzie</a>; Email: <span style="color:black;"> mganesh@usc.edu , mukkeshganesh@gmail.com ;</span> LinkedIn:<a style="color:black;" href="https://www.linkedin.com/in/mukkesh-g/" target="_blank" rel="noopener noreferrer">Mukkesh Ganesh</a></p>
       </div>
         </div>
       </section>
 
 
 
-
+<section id="education">
       <div class="container">
     <div class="section-header">
-      <h2>Education</h2>
+      <h2 style="font-weight:900;font-size:40px;">EDUCATION</h2>
       <hr>
     </div>
     <div class="steps">
@@ -306,36 +317,12 @@ font-weight: 530;
         <i class="step-line"></i>
         <div class="date">2015</div>
       </div>
-      <div class="steps-container">
-        <div class="content">
-          <h2>Lorem ipsum dolor</h2>
-          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        <i class="step-line"></i>
-        <div class="date">2003</div>
-      </div>
-      <div class="steps-container">
-        <div class="content">
-          <h2>Lorem ipsum dolor</h2>
-          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        <i class="step-line"></i>
-        <div class="date">2004</div>
-      </div>
-      <div class="steps-container">
-        <div class="content">
-          <h2>Lorem ipsum dolor</h2>
-          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        <i class="step-line"></i>
-        <div class="date">2005</div>
-      </div>
     </div>
   </div>
-
+</section>
 
       <section id="work-experience">
-        <h2>Work Experience</h2>
+        <h2 style="font-weight:900;font-size:40px;">WORK EXPERIENCE</h2>
         <div class="section-content">
           <h3>Current Position</h3>
           <p>Insert details about your current position as a data scientist here, including the company you work for and the projects you are currently working on.</p>
@@ -346,7 +333,7 @@ font-weight: 530;
         </div>
       </section>
       <section id="research-projects">
-        <h2>Research Projects</h2>
+        <h2 style="font-weight:900;font-size:40px;">RESEARCH PROJECTS</h2>
         <div class="section-content">
           <div class="row project-row">
             <div class="col-md-6 col-xs-12 project">
@@ -354,7 +341,7 @@ font-weight: 530;
               <h3 style="font-size:23px">Diabetic Retinopathy Diagnosis with InceptionResNetV2, Xception and EfficientNetB3</h3>
 		<h4> December 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
-              <p>Investigated performance of transfer learning enhanced models on India-specific IDRiD dataset and experimented with data augmentation; Improved accuracy. Presented at ICRTAC 2020. </p>
+              <p>Investigated performance of transfer learning enhanced models on India-specific IDRiD dataset and experimented<br>with data augmentation. Increased SOTA Accuracy. Presented at ICRTAC 2020. </p>
               <a href="https://link.springer.com/chapter/10.1007/978-981-16-6448-9_41" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
             <div class="col-md-6 col-xs-12 project">
@@ -362,7 +349,7 @@ font-weight: 530;
               <h3>Autoencoder based Network Anomaly Detection</h3>
 		<h4>October 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
-              <p>Examined NLS-KDD dataset to train and evaluate performance of Denoising, Sparse and hybrid Autoencoders for Network Intrusion Detection. Presented at IEEE - TEMSMET 2020. </p>
+              <p>Examined NLS-KDD dataset to train and evaluate performance of Denoising, Sparse and hybrid Autoencoders<br>for Network Intrusion Detection. Presented at IEEE - TEMSMET 2020. </p>
               <a href="https://ieeexplore.ieee.org/abstract/document/9557464" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
@@ -372,21 +359,21 @@ font-weight: 530;
               <h3>Breast Cancer Histopathological Image Classification</h3>
 		<h4>August 2020</h4>
 		<h4>Tech Stack: Python, Tensorflow, Keras and SciKit-Learn</h4>
-              <p>Conducted analysis on models based on EfficientNet Architecture to classify breast cancer histopathological images; Performance exceeded prior SOTA ResNet & DenseNet models. Presented at IEEE-TEMSMET 2020. </p>
+              <p>Conducted analysis on models based on EfficientNet Architecture to classify breast cancer histopathological images.<br>Performance exceeded prior SOTA ResNet & DenseNet models. Presented at IEEE-TEMSMET 2020. </p>
               <a href="https://ieeexplore.ieee.org/abstract/document/9557441" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
             <div class="col-md-6 col-xs-12 project">
               <img style="height:50%;width:50%;" src="images/car.PNG" alt="Project 4">
               <h3>Used Car Price Prediction using Supervised Learning Methodologies</h3><h4>December 2019</h4>
 		<h4>Tech Stack: SAS and Python</h4>
-              <p>Tested the effectiveness of different machine learning models in predicting the price of used cars. Presented at the 2nd World Summit on Advances in Science, Eng. and Technology, Indiana, October 2019.</p>
+              <p>Tested the effectiveness of different machine learning models in predicting the price of used cars.<br>Presented at the 2nd World Summit on Advances in Science, Eng. and Technology, Indiana, October 2019.</p>
               <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ArPyUn4AAAAJ&authuser=2&citation_for_view=ArPyUn4AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
         </div>
       </section>
       <section id="academic-projects">
-        <h2>Academic Projects</h2>
+        <h2 style="font-weight:900;font-size:40px;">ACADEMIC PROJECTS</h2>
         <div class="section-content">
           <div class="row project-row">
             <div class="col-md-6 col-xs-12 project">
@@ -434,7 +421,7 @@ font-weight: 530;
       </section>
     </main>
     <footer>
-      <p>Copyright 20XX</p>
+      <p>Copyright 2023</p>
     </footer>
 <script>
       $(document).ready(function() {
