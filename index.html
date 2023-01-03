@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html style="background-color: #81c5d9; /* Ocean blue color */">
+<html style="background-color: #07374a; /* Ocean blue color */">
   <head>
     <meta charset="utf-8">
     <title>Data Scientist Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
     <style>
       /* Add some style to the page */
       body {
@@ -52,7 +54,7 @@
         text-align: center;
       }
       #about {
-        background-color: #00b4d8; /* Ocean blue color */
+        background-color: /*#00b4d8*/; /* Ocean blue color */
       }
       #work-experience {
         background-color: #00c3a7; /* Ocean green color */
@@ -100,18 +102,18 @@
     </header>
     <nav>
     <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work-experience">Work Experience</a></li>
-        <li><a href="#research-projects">Research Projects</a></li>
-        <li><a href="#academic-projects">Academic Projects</a></li>
+        <li><a href="#about" class="scrollLink">About</a></li>
+        <li><a href="#work-experience" class="scrollLink">Work Experience</a></li>
+        <li><a href="#research-projects" class="scrollLink">Research Projects</a></li>
+        <li><a href="#academic-projects" class="scrollLink">Academic Projects</a></li>
       </ul>
     </nav>
     <main>
       <section id="about">
-	<img style="height:250px;width:auto;" src="images/pfp.png">
-        <h2>MUKKESH GANESH</h2>
+	<img style="height:300px;width:auto;" src="images/pfp.png">
+        <h2 style="color: white;">MUKKESH GANESH</h2>
         <div class="section-content">
-          <p>Insert information about yourself as a data scientist here.</p>
+          <p style="color: white;">Insert information about yourself as a data scientist here.</p>
         </div>
       </section>
       <section id="work-experience">
@@ -130,16 +132,18 @@
         <div class="section-content">
           <div class="project-row">
             <div class="project">
-              <img src="project1.jpg" alt="Project 1">
-              <h3>Project 1</h3>
-              <p>Insert details about your first research project here.</p>
-              <a href="#">View Project</a>
+              <img style="height:270px;width:auto;" src="images/DR.png" alt="Project 1">
+              <h3>Diabetic Retinopathy Diagnosis with InceptionResNetV2, Xception and EfficientNetB3</h3>
+		<h4> December 2020</h4>
+              <p>Investigated performance of transfer learning enhanced models on India-specific IDRiD dataset and experimented with data augmentation; Improved accuracy. Presented at ICRTAC 2020. </p>
+              <a href="https://link.springer.com/chapter/10.1007/978-981-16-6448-9_41" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
             <div class="project">
-              <img src="project2.jpg" alt="Project 2">
-              <h3>Project 2</h3>
-              <p>Insert details about your second research project here.</p>
-              <a href="#">View Project</a>
+              <img style="height:270px;width:auto;" src="images/autoenc.png" alt="Project 2">
+              <h3>Autoencoder based Network Anomaly Detection</h3>
+		<h4>October 2020</h4>
+              <p>Examined NLS-KDD dataset to train and evaluate performance of Denoising, Sparse and hybrid Autoencoders for Network Intrusion Detection. Presented at IEEE - TEMSMET 2020. </p>
+              <a href="https://ieeexplore.ieee.org/abstract/document/9557464" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
           <div class="project-row">
@@ -209,5 +213,15 @@
     <footer>
       <p>Copyright 20XX</p>
     </footer>
+<script>
+      $(document).ready(function() {
+          $("a.scrollLink").click(function(event) {
+              event.preventDefault();
+              $("html, body").animate({
+                  scrollTop: $($(this).attr("href")).offset().top -100
+                }, 700);
+            });
+        });
+    </script>
   </body>
 </html>
