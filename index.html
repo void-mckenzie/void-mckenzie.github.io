@@ -62,60 +62,110 @@
       main {
         margin-top: 60px;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Data Scientist Portfolio</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#work-experience">Work Experience</a></li>
-        <li><a href="#research-projects">Research Projects</a></li>
-        <li><a href="#academic-projects">Academic Projects</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <div class="section-content">
-          <img src="profile-picture.jpg" alt="Profile picture" class="profile-picture">
-          <p>Insert a brief overview of your background, education, and skills as a data scientist here.</p>
-        </div>
-      </section>
-      <section id="work-experience">
-        <h2>Work Experience</h2>
-        <h3>Current Position</h3>
-        <div class="section-content">
-          <p>Insert details about your current position as a data scientist here, including the company you work for and the projects you're working on.</p>
-        </div>
-        <h3>Past Positions</h3>
-        <div class="section-content">
-          <p>Insert details about any past positions as a data scientist here, including the companies you worked for and the projects you worked on.</p>
-        </div>
-      </section>
-      <section id="research-projects">
-        <h2>Research Projects</h2>
-        <div class="section-content">
-          <h3>Project 1</h3>
-          <p>Insert details about your first research project here.</p>
-          <h3>Project 2</h3>
-          <p>Insert details about your second research project here.</p>
-        </div>
-      </section>
-      <section id="academic-projects">
-        <h2>Academic Projects</h2>
-        <div class="section-content">
-          <h3>Project 1</h3>
-          <p>Insert details about your first academic project here.</p>
-          <h3>Project 2</h3>
-          <p>Insert details about your second academic project here.</p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>Copyright 20XX</p>
-    </footer>
-  </body>
+
+      /* Style the toggle button */
+      .toggle-button {
+        background-color: #333;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      /* Style the dropdown menu */
+      .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        z-index: 1;
+      }
+      .dropdown-menu li {
+        margin: 0;
+        padding: 10px;
+      }
+      .dropdown-menu a {
+        color: #333;
+        display: block;
+       
+      text-decoration: none;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Scientist Portfolio</h1>
+  </header>
+  <nav>
+    <button class="toggle-button">Menu</button>
+    <ul class="dropdown-menu">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#work-experience">Work Experience</a></li>
+      <li><a href="#research-projects">Research Projects</a></li>
+      <li><a href="#academic-projects">Academic Projects</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="section-content">
+        <img src="profile-picture.jpg" alt="Profile picture" class="profile-picture">
+        <p>Insert a brief overview of your background, education, and skills as a data scientist here.</p>
+      </div>
+    </section>
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <h3>Current Position</h3>
+      <div class="section-content">
+        <p>Insert details about your current position as a data scientist here, including the company you work for and the projects you're working on.</p>
+      </div>
+      <h3>Past Positions</h3>
+      <div class="section-content">
+        <p>Insert details about any past positions as a data scientist here, including the companies you worked for and the projects you worked on.</p>
+      </div>
+    </section>
+    <section id="research-projects">
+      <h2>Research Projects</h2>
+      <div class="section-content">
+        <h3>Project 1</h3>
+        <p>Insert details about your first research project here.</p>
+        <h3>Project 2</h3>
+        <p>Insert details about your second research project here.</p>
+      </div>
+    </section>
+    <section id="academic-projects">
+      <h2>Academic Projects</h2>
+      <div class="section-content">
+        <h3>Project 1</h3>
+        <p>Insert details about your first academic project here.</p>
+        <h3>Project 2</h3>
+        <p>Insert details about your second academic project here.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright 20XX</p>
+  </footer>
+
+  <!-- Add the JavaScript to toggle the dropdown menu -->
+  <script>
+  const toggleButton = document.querySelector('.toggle-button');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  toggleButton.addEventListener('click', function() {
+    if (dropdownMenu.style.display === 'none') {
+      dropdownMenu.style.display = 'flex';
+    } else {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
 </html>
