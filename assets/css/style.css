@@ -529,3 +529,15 @@ nav {
     font-family: 'Fira Code', 'Courier New', monospace;
     font-size: 0.95rem;
 }
+
+/* Add these new rules to the bottom of your style.css file */
+
+.project-card-link {
+    display: flex; /* This makes the <a> tag a proper block-level flex container */
+    text-decoration: none; /* Removes the default link underline */
+    color: inherit; /* Makes the link inherit text color from its parent */
+}
+
+.project-card {
+    width: 100%; /* Makes the inner div fill the full width of the <a> tag */
+}
