@@ -252,15 +252,17 @@ nav {
 
 /* Vibe Coding Section */
 .project-grid {
-    display: grid;
-    /* Default to a single column for mobile */
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  /* Use a single column for mobile */
+  column-count: 1;
+  gap: 0; /* The gap is now handled by margin on the cards */
 }
+
 @media (min-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .project-grid {
+    /* Use two columns for desktop */
+    column-count: 2;
+    column-gap: 2rem; /* The space between columns */
+  }
 }
 
 /* Find your existing .project-card rule and add these two lines */
@@ -541,6 +543,10 @@ nav {
     display: flex; /* This makes the <a> tag a proper block-level flex container */
     text-decoration: none; /* Removes the default link underline */
     color: inherit; /* Makes the link inherit text color from its parent */
+    
+    /* ADD THESE TWO LINES: */
+    break-inside: avoid;
+    margin-bottom: 2rem;
 }
 
 .project-card {
