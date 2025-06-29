@@ -4,26 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mukkesh Ganesh</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="images/pfp.png" alt="Mukkesh Ganesh" class="profile">
-        <h1>Mukkesh Ganesh</h1>
-    </header>
-    <main>
-        <section id="links">
-            <h2>Find me online</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/mukkesh-g/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="resume_placeholder.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-                <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
-                <li><a href="https://www.worldcubeassociation.org" target="_blank" rel="noopener">Cubing Profile</a></li>
+    <div class="bg-animation"></div>
+    <div class="scroll-indicator"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MG</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Vibe Coding</a></li>
+                <li><a href="#topics">Research</a></li>
+                <li><a href="#stats">Interests</a></li>
             </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Mukkesh Ganesh</p>
-    </footer>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="assets/images/pfp.png" alt="Mukkesh Ganesh" class="profile-img">
+            <h1>Mukkesh Ganesh</h1>
+            <p class="subtitle">Welcome to my digital playground where code meets curiosity</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                <a href="#resume" class="btn btn-outline">View Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="resume-grid">
+            <div class="card fade-in">
+                <h3>🎓 Education</h3>
+                <p>This section will showcase your academic background, degrees, and relevant coursework.</p>
+            </div>
+            <div class="card fade-in">
+                <h3>💼 Experience</h3>
+                <p>Professional experience, internships, and key projects will be highlighted here.</p>
+            </div>
+            <div class="card fade-in">
+                <h3>🛠️ Skills</h3>
+                <p>Technical skills, programming languages, frameworks, and tools you're proficient in.</p>
+            </div>
+            <div class="card fade-in">
+                <h3>🏆 Achievements</h3>
+                <p>Awards, certifications, and notable accomplishments in your field.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Vibe Coding Diaries</h2>
+        <p style="text-align: center; color: var(--gray); margin-bottom: 3rem;">
+            A collection of projects born from late-night coding sessions and creative bursts
+        </p>
+        
+        <div class="project-grid">
+            <div class="project-card fade-in">
+                <div class="project-img">
+                    🚀 Project Preview
+                </div>
+                <h3 class="project-title">Project Alpha</h3>
+                <p class="project-description">
+                    An exciting project that showcases innovative algorithms and creative problem-solving.
+                </p>
+                <div class="project-links">
+                    <a href="#">🔗 Live Demo</a>
+                    <a href="#">📖 Blog Post</a>
+                    <a href="#">💻 GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-img">
+                    🎨 Creative Code
+                </div>
+                <h3 class="project-title">Visual Symphony</h3>
+                <p class="project-description">
+                    Interactive visualizations that blend mathematics with artistic expression.
+                </p>
+                <div class="project-links">
+                    <a href="#">🔗 Live Demo</a>
+                    <a href="#">📖 Blog Post</a>
+                    <a href="#">💻 GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-img">
+                    🧠 AI Experiment
+                </div>
+                <h3 class="project-title">Neural Networks Playground</h3>
+                <p class="project-description">
+                    Experimenting with machine learning concepts and neural network architectures.
+                </p>
+                <div class="project-links">
+                    <a href="#">🔗 Live Demo</a>
+                    <a href="#">📖 Blog Post</a>
+                    <a href="#">💻 GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="topics" class="section">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="topics-grid"> 
+            <div class="topic-card fade-in">
+                <div class="topic-icon">🧮</div>
+                <h3>Physics-Informed Neural Networks (PINNs)</h3>
+                <p>Exploring the intersection of physics and machine learning through PINNs research.</p>
+                <ul class="paper-list">
+                    <li>"Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations"</li>
+                    <li>"DeepXDE: A deep learning library for solving differential equations"</li>
+                    <li>"Your presentation on PINN applications in fluid dynamics"</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card fade-in">
+                <div class="topic-icon">🔬</div>
+                <h3>Computational Science</h3>
+                <p>Papers and research in computational methods and scientific computing.</p>
+                <ul class="paper-list">
+                    <li>Add your favorite computational science papers here</li>
+                    <li>Research presentations and talks</li>
+                    <li>Conference proceedings</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card fade-in">
+                <div class="topic-icon">🤖</div>
+                <h3>Machine Learning Theory</h3>
+                <p>Theoretical foundations and cutting-edge developments in ML.</p>
+                <ul class="paper-list">
+                    <li>Your curated list of ML theory papers</li>
+                    <li>Workshop presentations</li>
+                    <li>Research notes and insights</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section">
+        <h2 class="section-title">Beyond Code</h2>
+        <div class="stats-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-icon">🎬</div>
+                <div class="stat-value">127</div>
+                <h3>Films Watched</h3>
+                <p>Letterboxd enthusiast tracking cinematic journeys</p>
+                <a href="#" style="color: var(--primary);">View My Letterboxd →</a>
+            </div>
+            
+            <div class="stat-card fade-in">
+                <div class="stat-icon">🧩</div>
+                <div class="stat-value">23.4s</div>
+                <h3>Best 3x3 Solve</h3>
+                <p>Speedcubing hobbyist always chasing faster times</p>
+                <a href="#" style="color: var(--primary);">WCA Profile →</a>
+            </div>
+            
+            <div class="stat-card fade-in">
+                <div class="stat-icon">📚</div>
+                <div class="stat-value">42</div>
+                <h3>Papers Read</h3>
+                <p>Research papers consumed this year</p>
+            </div>
+            
+            <div class="stat-card fade-in">
+                <div class="stat-icon">☕</div>
+                <div class="stat-value">∞</div>
+                <h3>Coffee Consumed</h3>
+                <p>Fuel for late-night coding sessions</p>
+            </div>
+        </div>
+    </section>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
