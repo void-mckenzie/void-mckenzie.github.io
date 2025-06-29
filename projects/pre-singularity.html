@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Singularity Projects - Mukkesh Ganesh</title>
-    <!-- The path to CSS is now relative: ../ -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body data-page="pre-singularity"> <!-- Data attribute to tell our script which data to load -->
+<body data-page="pre-singularity">
     <div class="bg-animation"></div>
     <div class="scroll-indicator"></div>
     
-    <!-- Reusable Navigation -->
     <nav>
         <div class="nav-container">
-            <!-- Link back to home page -->
             <a href="../index.html" class="logo">MG</a>
             <ul class="nav-links">
                 <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#resume">Resume</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
                 <li><a href="../index.html#research">Research</a></li>
             </ul>
@@ -28,16 +24,20 @@
     <main class="section page-content">
         <h1 class="section-title">Pre-Singularity Projects</h1>
         <p class="page-subtitle">
-            A collection of projects born from before the time of LLMs.
+            Traditional projects built from the ground up. Foundational work in compilers, physics engines, and more, coded without AI assistance.
         </p>
         
-        <!-- The JavaScript will populate this grid -->
         <div id="project-grid" class="project-grid">
-            <!-- Cards will be inserted here dynamically -->
+            <!-- Cards will be inserted here. If this text remains, the script didn't work. -->
+            <p style="color: var(--gray);">Attempting to load projects...</p>
+        </div>
+
+        <!-- ** NEW DEBUGGING LOG AREA ** -->
+        <div id="debug-log" style="margin-top: 3rem; padding: 1rem; border: 1px solid var(--primary); border-radius: 10px; background: rgba(30, 41, 59, 0.7); font-family: monospace; font-size: 14px;">
+             <h3 style="margin-bottom: 1rem; color: var(--secondary);">Live Debug Log</h3>
         </div>
     </main>
 
-    <!-- We need the new data loader script -->
     <script src="../assets/js/data-loader.js"></script>
 </body>
 </html>

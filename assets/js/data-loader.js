@@ -1,69 +1,99 @@
+// A helper function to print messages directly onto the webpage for easy debugging.
+function logToPage(message, isError = false) {
+    const logContainer = document.getElementById('debug-log');
+    if (logContainer) {
+        const p = document.createElement('p');
+        p.textContent = message;
+        if (isError) {
+            p.style.color = '#f87171'; // A reddish color for errors.
+            p.style.fontWeight = 'bold';
+        }
+        logContainer.appendChild(p);
+    }
+    // Also log to the console as a backup.
+    if (isError) {
+        console.error(message);
+    } else {
+        console.log(message);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Get the page type from the <body> tag's data-page attribute.
+    logToPage('EVENT: DOMContentLoaded fired. Script is running.');
+
     const pageType = document.body.dataset.page;
     if (!pageType) {
-        // If no data-page is set, do nothing.
-        return; 
+        logToPage('HALT: No "data-page" attribute found on the <body> tag.', true);
+        return;
     }
+    logToPage(`STEP 1: Found page type: "${pageType}"`);
 
-    // 2. Fetch the central data source. The path is relative to the HTML file.
+    // **THE CRITICAL FIX IS HERE**
+    // We map the HTML kebab-case attribute to the JSON camelCase key.
+    const keyMap = {
+        'vibe-coding': 'vibeCoding',
+        'pre-singularity': 'preSingularity',
+        'research': 'research' 
+    };
+    const dataKey = keyMap[pageType];
+    
+    if (!dataKey) {
+        logToPage(`HALT: The page type "${pageType}" is not a recognized key.`, true);
+        return;
+    }
+    logToPage(`STEP 2: Mapped to JSON key: "${dataKey}"`);
+
+    const containerId = (pageType === 'research') ? 'research-grid' : 'project-grid';
+    const container = document.getElementById(containerId);
+
+    if (!container) {
+        logToPage(`HALT: Cannot find the container element with ID: "#${containerId}" in the HTML.`, true);
+        return;
+    }
+    logToPage(`STEP 3: Found HTML container: "#${containerId}"`);
+
+    logToPage('STEP 4: Fetching data from ../assets/data.json...');
     fetch('../assets/data.json')
         .then(response => {
-            // **IMPROVEMENT**: Check if the fetch request was successful (e.g., not a 404 error).
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status} - Could not find data.json`);
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
             }
-            // If successful, parse the JSON data.
+            logToPage('SUCCESS: data.json file found and fetched.');
             return response.json();
         })
         .then(data => {
-            let items;
-            let container;
-            let cardGenerator;
+            logToPage('SUCCESS: data.json parsed successfully.');
+            const items = data[dataKey];
 
-            // 3. Determine which data array to use based on the page type.
-            if (pageType === 'vibe-coding' || pageType === 'pre-singularity') {
-                items = data[pageType]; // e.g., data['vibe-coding']
-                container = document.getElementById('project-grid');
-                cardGenerator = createProjectCard;
-            } else if (pageType === 'research') {
-                items = data.research;
-                container = document.getElementById('research-grid');
-                cardGenerator = createResearchCard;
+            if (!items) {
+                logToPage(`HALT: The key "${dataKey}" does not exist in your data.json file.`, true);
+                return;
             }
+            logToPage(`STEP 5: Found ${items.length} item(s) for key "${dataKey}".`);
+            
+            container.innerHTML = ''; // Clear loading message.
+            items.forEach(item => {
+                const cardGenerator = (pageType === 'research') ? createResearchCard : createProjectCard;
+                const cardHTML = cardGenerator(item);
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+            logToPage(`COMPLETE: Successfully generated and displayed ${items.length} cards.`);
+            
+            // Optionally hide the debug log on success after a delay
+            setTimeout(() => { 
+                const logContainer = document.getElementById('debug-log');
+                if (logContainer) logContainer.style.display = 'none';
+            }, 5000);
 
-            // 4. Check if we found both the data array and the container div in the HTML.
-            if (items && container) {
-                container.innerHTML = ''; // Clear any loading messages or placeholders.
-                items.forEach(item => {
-                    const cardHTML = cardGenerator(item);
-                    container.insertAdjacentHTML('beforeend', cardHTML);
-                });
-            } else {
-                // **IMPROVEMENT**: Log a specific error if data or container is missing.
-                console.error(`Error: Could not find data for pageType "${pageType}" in data.json, or the target container element was not found in the HTML.`);
-                if(container) {
-                    container.innerHTML = `<p style="color: var(--gray);">Error: Content data is missing or invalid.</p>`
-                }
-            }
         })
         .catch(error => {
-            // **IMPROVEMENT**: Catch any errors from the fetch/parsing process and display them.
-            console.error('Error loading or processing data:', error);
-            const container = document.getElementById('project-grid') || document.getElementById('research-grid');
-            if (container) {
-                container.innerHTML = `<p style="color: var(--gray);">Could not load items. Please check the console for details.</p>`;
-            }
+            logToPage(`FATAL ERROR: ${error.message}`, true);
         });
 });
 
-/**
- * Creates the HTML string for a single project card.
- * @param {object} project - The project object from data.json.
- * @returns {string} The HTML for the project card.
- */
+// The createProjectCard and createResearchCard functions remain the same as before.
+// ... (You can paste them here from the previous response)
 function createProjectCard(project) {
-    // If detailUrl is '#' or missing, the card won't be a link.
     const isLink = project.detailUrl && project.detailUrl !== '#';
     const wrapperTag = isLink ? 'a' : 'div';
     const hrefAttr = isLink ? `href="${project.detailUrl}"` : '';
@@ -72,7 +102,6 @@ function createProjectCard(project) {
         <${wrapperTag} ${hrefAttr} class="project-card-link">
             <div class="project-card fade-in">
                 <div class="project-img" style="background-image: url(${project.imageUrl || ''}); background-size: cover; background-position: center;">
-                    <!-- Fallback text inside a semi-transparent box -->
                     <span style="background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px;">${project.title}</span>
                 </div>
                 <h3 class="project-title">${project.subtitle}</h3>
@@ -86,11 +115,6 @@ function createProjectCard(project) {
     `;
 }
 
-/**
- * Creates the HTML string for a single research topic card.
- * @param {object} topic - The research topic object from data.json.
- * @returns {string} The HTML for the research card.
- */
 function createResearchCard(topic) {
     const isLink = topic.detailUrl && topic.detailUrl !== '#';
     const wrapperTag = isLink ? 'a' : 'div';
