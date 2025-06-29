@@ -253,8 +253,14 @@ nav {
 /* Vibe Coding Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Default to a single column for mobile */
+    grid-template-columns: 1fr;
     gap: 2rem;
+}
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Find your existing .project-card rule and add these two lines */
@@ -429,7 +435,6 @@ nav {
         display: none;
     }
     
-    .project-grid,
     .topics-grid,
     .stats-grid {
         grid-template-columns: 1fr;
