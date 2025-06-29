@@ -442,3 +442,81 @@ nav {
     z-index: 1001;
     transition: width 0.1s ease;
 }
+
+.page-content {
+    padding-top: 8rem; /* Add padding to push content below the fixed nav */
+    padding-bottom: 5rem;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for cards that are links */
+.topic-card-link, .project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Post/Article Page styles */
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(30, 41, 59, 0.7);
+}
+
+.post-content .project-title {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    color: var(--gray);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    border-left: 3px solid var(--secondary);
+    padding-left: 1rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.post-content pre {
+    background: var(--dark);
+    padding: 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.post-content code {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+}

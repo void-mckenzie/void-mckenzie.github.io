@@ -1,0 +1,82 @@
+{
+  "vibeCoding": [
+    {
+      "id": "vibe-alpha",
+      "title": "Project Alpha",
+      "subtitle": "AI-Assisted Algorithm Design",
+      "description": "An exciting project that showcases innovative algorithms and creative problem-solving, developed in collaboration with AI tools.",
+      "imageUrl": "../assets/images/project-placeholder-1.png",
+      "detailUrl": "posts/project-alpha-detail.html",
+      "liveDemoUrl": "#",
+      "githubUrl": "#",
+      "blogPostUrl": "#",
+      "tags": ["AI", "Algorithms", "Python"]
+    },
+    {
+      "id": "vibe-symphony",
+      "title": "Visual Symphony",
+      "subtitle": "Generative Art with AI",
+      "description": "Interactive visualizations that blend mathematics with artistic expression, using generative AI models as a creative partner.",
+      "imageUrl": "../assets/images/project-placeholder-2.png",
+      "detailUrl": "#",
+      "tags": ["JavaScript", "p5.js", "Generative AI"]
+    },
+    {
+      "id": "vibe-neural",
+      "title": "Neural Networks Playground",
+      "subtitle": "Interactive ML Exploration",
+      "description": "Experimenting with machine learning concepts and neural network architectures, guided by AI-powered code suggestions.",
+      "imageUrl": "../assets/images/project-placeholder-3.png",
+      "detailUrl": "#",
+      "tags": ["Machine Learning", "TensorFlow.js", "AI Tools"]
+    }
+  ],
+  "preSingularity": [
+    {
+      "id": "trad-compiler",
+      "title": "Custom Compiler",
+      "subtitle": "From Scratch in C++",
+      "description": "A foundational project building a compiler for a small, custom-designed programming language.",
+      "imageUrl": "../assets/images/project-placeholder-4.png",
+      "detailUrl": "#",
+      "githubUrl": "#",
+      "tags": ["C++", "Compilers", "Computer Science"]
+    },
+    {
+      "id": "trad-physics",
+      "title": "Physics Engine",
+      "subtitle": "2D Rigid Body Simulation",
+      "description": "A simple 2D physics engine that simulates collisions, gravity, and forces. Coded traditionally without AI assistance.",
+      "imageUrl": "../assets/images/project-placeholder-5.png",
+      "detailUrl": "#",
+      "githubUrl": "#",
+      "tags": ["Java", "Physics", "Simulation"]
+    }
+  ],
+  "research": [
+    {
+      "id": "research-pinn",
+      "title": "Physics-Informed Neural Networks (PINNs)",
+      "description": "Exploring the intersection of deep learning and differential equations to solve complex physical problems.",
+      "detailUrl": "papers/pinn-summary-detail.html",
+      "keyPapers": [
+        "Raissi, et al. - Physics-informed neural networks",
+        "Lu, et al. - DeepXDE: A deep learning library"
+      ]
+    },
+    {
+      "id": "research-comp-sci",
+      "title": "Computational Science",
+      "description": "Investigating high-performance computing methods and numerical simulations for scientific discovery.",
+      "detailUrl": "#",
+      "keyPapers": ["List a key paper here"]
+    },
+    {
+      "id": "research-ml-theory",
+      "title": "Machine Learning Theory",
+      "description": "Studying the theoretical foundations and cutting-edge developments that underpin modern machine learning.",
+      "detailUrl": "#",
+      "keyPapers": ["List a key paper here"]
+    }
+  ]
+}

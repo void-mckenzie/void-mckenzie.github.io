@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Singularity Projects - Mukkesh Ganesh</title>
+    <!-- The path to CSS is now relative: ../ -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="pre-singularity"> <!-- Data attribute to tell our script which data to load -->
+    <div class="bg-animation"></div>
+    <div class="scroll-indicator"></div>
+    
+    <!-- Reusable Navigation -->
+    <nav>
+        <div class="nav-container">
+            <!-- Link back to home page -->
+            <a href="../index.html" class="logo">MG</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#resume">Resume</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="section page-content">
+        <h1 class="section-title">Pre-Singularity Projects</h1>
+        <p class="page-subtitle">
+            A collection of projects born from before the time of LLMs.
+        </p>
+        
+        <!-- The JavaScript will populate this grid -->
+        <div id="project-grid" class="project-grid">
+            <!-- Cards will be inserted here dynamically -->
+        </div>
+    </main>
+
+    <!-- We need the new data loader script -->
+    <script src="../assets/js/data-loader.js"></script>
+</body>
+</html>

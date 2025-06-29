@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary: Physics-Informed Neural Networks (PINNs) - Mukkesh Ganesh</title>
+    <!-- Path to CSS is now ../../ -->
+    <link rel="stylesheet" href="../../assets/css/style.css"> 
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Reusable Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">MG</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#home">Home</a></li>
+                <!-- Link back to the main research page -->
+                <li><a href="../index.html">All Research</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <main class="section page-content">
+        <article class="post-content card">
+            <!-- Article Header -->
+            <h1 class="project-title">Physics-Informed Neural Networks (PINNs)</h1>
+            <p class="subtitle">A Deep Dive into the Fusion of Machine Learning and Physical Laws</p>
+            <div class="post-meta">
+                <span>Topic: Machine Learning, Computational Physics</span>
+                <span>Status: Ongoing Exploration</span>
+            </div>
+            
+            <!-- Main Content -->
+            <h2>High-Level Summary</h2>
+            <p>Physics-Informed Neural Networks (PINNs) represent a groundbreaking paradigm in scientific computing. Instead of relying purely on data, PINNs integrate the governing laws of physics, expressed as partial differential equations (PDEs), directly into the neural network's training process. This fusion allows them to solve both forward and inverse problems even with sparse or incomplete data, essentially using physical laws as a powerful form of regularization.</p>
+            
+            <h2>The Core Idea: The Hybrid Loss Function</h2>
+            <p>The magic of a PINN lies in its custom loss function. A traditional neural network's loss is based solely on the mismatch between its predictions and the training data (the data loss). A PINN adds a second component: the physics loss. This term measures how well the network's output satisfies the governing PDEs. The network is then trained to minimize a combination of both losses, forcing it to find a solution that is not only consistent with the observed data but also obeys the fundamental laws of physics.</p>
+            <pre><code># Conceptual Loss Function
+Loss_total = Loss_data + λ * Loss_physics
+
+# Loss_data: Mean Squared Error on known data points
+# Loss_physics: Mean Squared Error of the PDE residual at random collocation points
+# λ (lambda): A hyperparameter to balance the two loss terms</code></pre>
+
+            <h2>Key Applications</h2>
+            <p>PINNs are incredibly versatile and have shown promise in numerous fields:</p>
+            <ul>
+                <li><strong>Fluid Dynamics:</strong> Simulating and predicting complex fluid flows where sensor data is limited.</li>
+                <li><strong>Solid Mechanics:</strong> Modeling material stress and strain under various conditions.</li>
+                <li><strong>Heat Transfer:</strong> Solving for temperature distribution in complex geometries.</li>
+                <li><strong>Inverse Problems:</strong> Discovering unknown physical parameters (e.g., fluid viscosity) from observed data by including them as trainable variables.</li>
+            </ul>
+
+            <h2>My Perspective & Future Directions</h2>
+            <p>This is placeholder text for your personal insights. You could discuss the challenges of PINNs, such as the difficulty in balancing the loss terms or the computational expense. You might also speculate on their future, such as their integration with generative models or their application in digital twin technologies. This section makes the page uniquely yours.</p>
+
+            <!-- Resources and Links -->
+            <div class="cta-buttons" style="margin-top: 2rem; justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 1rem;">
+                <h3>Key Papers & Resources:</h3>
+                <a href="https://arxiv.org/abs/1711.10561" target="_blank" class="btn btn-outline">Raissi, et al. - "Physics-informed neural networks" (Seminal Paper)</a>
+                <a href="https://deepxde.readthedocs.io/en/latest/" target="_blank" class="btn btn-outline">DeepXDE Documentation (A Popular Library)</a>
+                <a href="https://www.youtube.com/watch?v=k_b4uX2w2c0" target="_blank" class="btn btn-outline">Introductory Video by Steve Brunton</a>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

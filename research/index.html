@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explored Research Areas - Mukkesh Ganesh</title>
+    <!-- The path to CSS is relative: ../ -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="research"> <!-- Data attribute tells our script to load research data -->
+    <div class="bg-animation"></div>
+    <div class="scroll-indicator"></div>
+    
+    <!-- Reusable Navigation -->
+    <nav>
+        <div class="nav-container">
+            <!-- Link back to home page -->
+            <a href="../index.html" class="logo">MG</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#resume">Resume</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="section page-content">
+        <h1 class="section-title">Explored Research Areas</h1>
+        <p class="page-subtitle">
+            A curated collection of my readings, summaries, and thoughts on fascinating topics at the intersection of machine learning, physics, and computational science.
+        </p>
+        
+        <!-- The data-loader.js script will populate this grid from data.json -->
+        <div id="research-grid" class="topics-grid">
+            <!-- Research topic cards will be dynamically inserted here -->
+            <!-- You can leave a loading message here if you want -->
+            <p style="color: var(--gray); text-align: center;">Loading research topics...</p>
+        </div>
+    </main>
+
+    <!-- Link to the data loader script -->
+    <script src="../assets/js/data-loader.js"></script>
+</body>
+</html>
