@@ -94,21 +94,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // The createProjectCard and createResearchCard functions remain the same as before.
 // ... (You can paste them here from the previous response)
 function createProjectCard(project) {
+    // Determine if the whole card should be a link
     const isLink = project.detailUrl && project.detailUrl !== '#';
     const wrapperTag = isLink ? 'a' : 'div';
     const hrefAttr = isLink ? `href="${project.detailUrl}"` : '';
-    
+
+    // This template is now clean. It creates ONE wrapper tag (<a> or <div>).
+    // The content inside does NOT have extra links to the detail page.
     return `
         <${wrapperTag} ${hrefAttr} class="project-card-link">
             <div class="project-card fade-in">
-                <div class="project-img" style="background-image: url(${project.imageUrl || ''}); background-size: cover; background-position: center;">
+                <div class="project-img" style="background-image: url(${project.imageUrl || '../assets/images/project-placeholder-1.png'}); background-size: cover; background-position: center;">
+                    <!-- This span is for the title overlay on the image -->
                     <span style="background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px;">${project.title}</span>
                 </div>
                 <h3 class="project-title">${project.subtitle}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="project-links">
-                    ${project.liveDemoUrl ? `<a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a>` : ''}
-                    ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">💻 GitHub</a>` : ''}
+                    ${project.liveDemoUrl && project.liveDemoUrl !== '#' ? `<a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a>` : ''}
+                    ${project.githubUrl && project.githubUrl !== '#' ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">💻 GitHub</a>` : ''}
                 </div>
             </div>
         </${wrapperTag}>
