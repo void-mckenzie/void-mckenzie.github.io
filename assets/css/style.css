@@ -331,9 +331,15 @@ nav {
 
 /* Topics Section */
 .topics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    column-count: 1; /* Default to a single column on mobile */
+    gap: 0; /* Use margin on cards for vertical space */
+}
+
+@media (min-width: 768px) {
+    .topics-grid {
+        column-count: 2;
+        column-gap: 2rem; /* The space between columns */
+    }
 }
 
 .topic-card {
@@ -402,6 +408,7 @@ nav {
 .stat-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    object-fit: contain;
 }
 
 .stat-value {
@@ -437,7 +444,6 @@ nav {
         display: none;
     }
     
-    .topics-grid,
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -478,6 +484,10 @@ nav {
     text-decoration: none;
     color: inherit;
     display: block;
+
+    /* ADD THESE TWO LINES: */
+    break-inside: avoid;
+    margin-bottom: 2rem;
 }
 
 /* Post/Article Page styles */
