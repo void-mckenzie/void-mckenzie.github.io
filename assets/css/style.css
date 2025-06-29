@@ -75,7 +75,7 @@ nav {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -135,7 +135,7 @@ nav {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     animation: fadeInUp 1s ease;
 }
 
@@ -212,7 +212,7 @@ nav {
 /* Sections */
 .section {
     padding: 5rem 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -482,7 +482,7 @@ nav {
 
 /* Post/Article Page styles */
 .post-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background: rgba(30, 41, 59, 0.7);
 }
